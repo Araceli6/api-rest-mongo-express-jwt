@@ -64,15 +64,11 @@ export const infoUser = async (req, res) => {
 };
 
 export const refreshToken = (req, res) => {
-    try {
-        const { token, expiresIn } = generateToken(req.uid);
     try{
         const { token, expiresIn } = generateToken(req.uid);
         return res.json({ token, expiresIn });
     } catch (error) {
         console.log(error);
-
-        return res.status(500).json({ error: "Error de servidor" });
 
         return res.status(500).json({ error: "Error de servidor" });
     }
