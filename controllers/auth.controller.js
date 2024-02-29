@@ -79,7 +79,7 @@ export const logout = (req, res) => {
         path: '/',        
         httpOnly: true,        
         secure: true,        
-        sameSite: 'none'
+        sameSite: 'none',
     });
     res.json({ok: 'logout'});
 };
